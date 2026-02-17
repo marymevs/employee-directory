@@ -11,4 +11,10 @@ const employees = [
   { id: 10, name: "Gwen Grollmann" },
 ];
 
+export function getEmployee(id) {
+  const employee = employees.find((emp) => emp.id === Number(id));
+  console.log(employee);
+  return employee;
+}
+
 export default employees;

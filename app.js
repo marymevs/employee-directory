@@ -16,7 +16,9 @@ app.get("/employees", (req, res) => {
 app.get("/employees/random", (req, res) => {
   // choose a random number from first id (1) to last id (10)
   const randomIndex = Math.floor(1 + Math.random() * employees.length);
+
   const randomEmployee = getEmployee(randomIndex);
+
   randomEmployee
     ? res.send(randomEmployee)
     : res.status(404).send("Error with random employee selection");
